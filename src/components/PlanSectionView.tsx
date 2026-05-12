@@ -16,7 +16,7 @@
 
 import Link from "next/link";
 import { PlanSection, PlanItem } from "@/types/domain";
-import { module as moduleRoute } from "@/lib/routes";
+import { moduleRoute } from "@/lib/routes";
 import { cn } from "@/lib/cn";
 
 // ------------------------------------------------------------

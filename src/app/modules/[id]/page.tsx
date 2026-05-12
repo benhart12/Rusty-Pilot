@@ -28,8 +28,8 @@ import AppShell from "@/components/AppShell";
 import MasteryBar from "@/components/MasteryBar";
 import Button from "@/components/ui/Button";
 import { Card, CardBody } from "@/components/ui/Card";
-import LoadingState from "@/components/ui/LoadingState";
-import EmptyState from "@/components/ui/EmptyState";
+import LoadingState from "@/components/LoadingState";
+import EmptyState from "@/components/EmptyState";
 import { cn } from "@/lib/cn";
 
 // ─────────────────────────────────────────────────────────────

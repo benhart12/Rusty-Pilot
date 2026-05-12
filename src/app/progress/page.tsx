@@ -21,12 +21,12 @@ import { useRouter } from "next/navigation";
 import { useRequireAuth } from "@/hooks/useRequireAuth";
 import { listRecentAttempts } from "@/data/progress";
 import { queryCollection } from "@/lib/firestore";
-import { module as moduleRoute, ROUTES } from "@/lib/routes";
+import { moduleRoute, ROUTES } from "@/lib/routes";
 import { AttemptRecord, UserModuleProgress, ModuleType } from "@/types/domain";
 import AppShell from "@/components/AppShell";
 import { Card, CardBody, CardHeader, CardTitle } from "@/components/ui/Card";
-import LoadingState from "@/components/ui/LoadingState";
-import EmptyState from "@/components/ui/EmptyState";
+import LoadingState from "@/components/LoadingState";
+import EmptyState from "@/components/EmptyState";
 import MasteryBar from "@/components/MasteryBar";
 import { cn } from "@/lib/cn";
 

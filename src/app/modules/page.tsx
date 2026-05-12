@@ -23,12 +23,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useRequireAuth } from "@/hooks/useRequireAuth";
 import { listModules } from "@/data/modules";
 import { queryCollection } from "@/lib/firestore";
-import { module as moduleRoute } from "@/lib/routes";
+import { moduleRoute } from "@/lib/routes";
 import { ContentModule, ModuleType, UserModuleProgress } from "@/types/domain";
 import AppShell from "@/components/AppShell";
 import ModuleTile from "@/components/ModuleTile";
-import LoadingState from "@/components/ui/LoadingState";
-import EmptyState from "@/components/ui/EmptyState";
+import LoadingState from "@/components/LoadingState";
+import EmptyState from "@/components/EmptyState";
 import { cn } from "@/lib/cn";
 
 // ─────────────────────────────────────────────────────────────

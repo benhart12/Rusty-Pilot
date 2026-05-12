@@ -1,3 +1,13 @@
+# Dependencies and build output
+/node_modules/
+/.next/
+/out/
+next-env.d.ts
+
+# Environment files
+.env.local
+.env.*.local
+
 # Firebase build and deployment files
 /firebase-debug.log
 /firebase-debug.*.log
@@ -26,3 +36,4 @@ yarn-error.log*
 
 # Environment files (local configs)
 /.env.*
+!/.env.local.example

@@ -19,36 +19,18 @@ import { getFirestore, Firestore } from "firebase/firestore";
 import { getStorage, FirebaseStorage } from "firebase/storage";
 
 // ------------------------------------------------------------
-// Environment variable guard
-// ------------------------------------------------------------
-
-/**
- * Asserts that a NEXT_PUBLIC_ environment variable is present and non-empty.
- * Throws a descriptive error at startup rather than producing silent undefined
- * values that surface as cryptic Firebase errors later.
- */
-function assertEnv(name: string): string {
-  const value = process.env[name];
-  if (!value || value.trim() === "") {
-    throw new Error(
-      `[firebase.ts] Missing required environment variable: ${name}\n` +
-        `Add it to your .env.local file and restart the dev server.`
-    );
-  }
-  return value;
-}
-
-// ------------------------------------------------------------
 // Firebase config
 // ------------------------------------------------------------
 
+// Next.js only inlines NEXT_PUBLIC_ vars with static dot notation —
+// bracket notation (process.env[name]) is not replaced in the browser bundle.
 const firebaseConfig = {
-  apiKey:            assertEnv("NEXT_PUBLIC_FIREBASE_API_KEY"),
-  authDomain:        assertEnv("NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN"),
-  projectId:         assertEnv("NEXT_PUBLIC_FIREBASE_PROJECT_ID"),
-  storageBucket:     assertEnv("NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET"),
-  messagingSenderId: assertEnv("NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID"),
-  appId:             assertEnv("NEXT_PUBLIC_FIREBASE_APP_ID"),
+  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY            ?? "",
+  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN        ?? "",
+  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID         ?? "",
+  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET     ?? "",
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? "",
+  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID             ?? "",
 };
 
 // ------------------------------------------------------------

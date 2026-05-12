@@ -30,7 +30,7 @@ import { Card, CardBody, CardHeader, CardTitle, CardFooter } from "@/components/
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import AircraftPicker from "@/components/AircraftPicker";
-import LoadingState from "@/components/ui/LoadingState";
+import LoadingState from "@/components/LoadingState";
 import { cn } from "@/lib/cn";
 
 // ─────────────────────────────────────────────────────────────

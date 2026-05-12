@@ -71,10 +71,10 @@ export const ROUTES = {
    * Builds the path for a single module detail page.
    *
    * @example
-   *   module("eng-001")  // → "/modules/eng-001"
+   *   moduleRoute("eng-001")  // → "/modules/eng-001"
    */
-  export function module(id: string): string {
-    if (!id) throw new Error("[routes] module(): id must not be empty.");
+  export function moduleRoute(id: string): string {
+    if (!id) throw new Error("[routes] moduleRoute(): id must not be empty.");
     return `/modules/${encodeURIComponent(id)}`;
   }
   

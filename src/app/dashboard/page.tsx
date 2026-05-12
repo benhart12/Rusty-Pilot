@@ -19,14 +19,14 @@ import { getUserProfile } from "@/lib/user";
 import { daysSince, rustLevel } from "@/lib/scoring";
 import { queryCollection } from "@/lib/firestore";
 import { getModule } from "@/data/modules";
-import { ROUTES, module as moduleRoute } from "@/lib/routes";
+import { ROUTES, moduleRoute } from "@/lib/routes";
 import { UserProfile, UserModuleProgress, ContentModule } from "@/types/domain";
 import AppShell from "@/components/AppShell";
 import { Card, CardHeader, CardTitle, CardBody, CardFooter } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import MasteryBar from "@/components/MasteryBar";
-import LoadingState from "@/components/ui/LoadingState";
-import EmptyState from "@/components/ui/EmptyState";
+import LoadingState from "@/components/LoadingState";
+import EmptyState from "@/components/EmptyState";
 import { cn } from "@/lib/cn";
 
 // ------------------------------------------------------------

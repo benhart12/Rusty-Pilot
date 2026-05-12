@@ -21,8 +21,8 @@ import { AircraftFamily, AircraftVariant, UserProfile } from "@/types/domain";
 import AppShell from "@/components/AppShell";
 import AircraftPicker from "@/components/AircraftPicker";
 import Button from "@/components/ui/Button";
-import LoadingState from "@/components/ui/LoadingState";
-import EmptyState from "@/components/ui/EmptyState";
+import LoadingState from "@/components/LoadingState";
+import EmptyState from "@/components/EmptyState";
 import { cn } from "@/lib/cn";
 
 // ------------------------------------------------------------

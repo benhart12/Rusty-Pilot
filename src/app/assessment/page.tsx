@@ -29,7 +29,7 @@ import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import { Card, CardBody } from "@/components/ui/Card";
 import MasteryBar from "@/components/MasteryBar";
-import LoadingState from "@/components/ui/LoadingState";
+import LoadingState from "@/components/LoadingState";
 import { cn } from "@/lib/cn";
 
 // ------------------------------------------------------------

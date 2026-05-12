@@ -24,8 +24,8 @@ import { recordAttempt, setUserModuleProgress, getUserModuleProgress } from "@/d
 import { ContentModule, DrillPrompt } from "@/types/domain";
 import AppShell from "@/components/AppShell";
 import Button from "@/components/ui/Button";
-import LoadingState from "@/components/ui/LoadingState";
-import EmptyState from "@/components/ui/EmptyState";
+import LoadingState from "@/components/LoadingState";
+import EmptyState from "@/components/EmptyState";
 import MasteryBar from "@/components/MasteryBar";
 import { cn } from "@/lib/cn";
 

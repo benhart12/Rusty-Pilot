@@ -33,7 +33,7 @@ import AppShell from "@/components/AppShell";
 import Stepper from "@/components/ui/Stepper";
 import Button from "@/components/ui/Button";
 import AircraftPicker from "@/components/AircraftPicker";
-import LoadingState from "@/components/ui/LoadingState";
+import LoadingState from "@/components/LoadingState";
 import { cn } from "@/lib/cn";
 
 // ─────────────────────────────────────────────────────────────
