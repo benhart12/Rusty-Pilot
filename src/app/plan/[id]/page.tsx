@@ -82,8 +82,8 @@ const PRINT_STYLES = `
 // ─────────────────────────────────────────────────────────────
 
 function PlanMeta({ plan }: { plan: StudyPlan }) {
-  const rust = plan.inputs.daysSinceFlight != null
-    ? rustLevel(plan.inputs.daysSinceFlight)
+  const rust = plan.inputs.daysSinceLastFlight != null
+    ? rustLevel(plan.inputs.daysSinceLastFlight)
     : null;
 
   const metaItems: { label: string; value: string }[] = [

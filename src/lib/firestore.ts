@@ -152,7 +152,7 @@ import {
     data: T
   ): Promise<string> {
     try {
-      const colRef = collection(db, ...collectionPath.split("/").filter(Boolean));
+      const colRef = collection(db, ...(collectionPath.split("/").filter(Boolean) as [string, ...string[]]));
       const docSnap = await addDoc(colRef, data);
       return docSnap.id;
     } catch (err) {
@@ -190,7 +190,7 @@ import {
     opts?: QueryOptions
   ): Promise<T[]> {
     try {
-      const colRef = collection(db, ...collectionPath.split("/").filter(Boolean));
+      const colRef = collection(db, ...(collectionPath.split("/").filter(Boolean) as [string, ...string[]]));
   
       // Assemble query constraints in order: where → orderBy → limit
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -87,7 +87,7 @@ function ProfileSection({ profile, onSave }: {
     setSaving(true);
     try {
       await onSave({
-        displayName: displayName.trim() || null,
+        displayName: displayName.trim() || undefined,
         totalHours: totalHours ? parseFloat(totalHours) : 0,
         lastFlightDate: lastFlightDate || null,
         ratings,

@@ -16,7 +16,7 @@
 
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useToast, Toast, ToastType } from "@/hooks/useToast";
 import { cn } from "@/lib/cn";
 
@@ -30,7 +30,7 @@ export { ToastProvider } from "@/hooks/useToast";
 interface ToastStyle {
   container: string;
   icon: string;
-  iconPath: JSX.Element;
+  iconPath: React.ReactElement;
 }
 
 const toastStyles: Record<ToastType, ToastStyle> = {

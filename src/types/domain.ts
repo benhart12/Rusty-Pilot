@@ -205,6 +205,10 @@ export interface AircraftFamily {
     focusTags: string[];
     /** Rough time budget in minutes the pilot has for studying */
     availableMinutes: number;
+    /** Where the pilot will be operating */
+    airportType?: "towered" | "nonTowered";
+    /** Airspace class (optional) */
+    airspace?: "B" | "C" | "D" | "E" | "G";
   }
   
   /** A single item within a plan section — references either a module or a tag group */

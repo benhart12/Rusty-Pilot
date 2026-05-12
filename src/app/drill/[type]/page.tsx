@@ -553,14 +553,15 @@ function DrillSessionInner() {
     try {
       // Write attempt record
       await recordAttempt(user.uid, {
-        id:          "",
-        moduleId:    moduleId ?? (planId ? `plan:${planId}` : "mixed"),
+        id:              "",
+        uid:             user.uid,
+        moduleIds:       moduleId ? [moduleId] : (planId ? [`plan:${planId}`] : ["mixed"]),
         score,
-        answeredAt:  now,
-        durationSec: 0,
-        prompts:     answered.map((a) => ({
-          kind:      a.prompt.kind,
-          correct:   a.answer.status === "correct" || a.answer.status === "seen",
+        createdAt:       now,
+        durationSeconds: 0,
+        answers:         answered.map((a, i) => ({
+          promptIndex:   i,
+          correct:       a.answer.status === "correct" || a.answer.status === "seen",
         })),
       });
 

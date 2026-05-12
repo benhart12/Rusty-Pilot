@@ -46,7 +46,7 @@ function dateKey(d: Date): string {
 function computeStreak(attempts: AttemptRecord[]): number {
   if (attempts.length === 0) return 0;
 
-  const uniqueDays = new Set(attempts.map((a) => dateKey(parseDate(a.answeredAt))));
+  const uniqueDays = new Set(attempts.map((a) => dateKey(parseDate(a.createdAt))));
   const sorted = Array.from(uniqueDays).sort().reverse(); // newest first
 
   const today = dateKey(new Date());
@@ -82,7 +82,7 @@ function activityLast7Days(attempts: AttemptRecord[]): { date: string; count: nu
   }
 
   attempts.forEach((a) => {
-    const k = dateKey(parseDate(a.answeredAt));
+    const k = dateKey(parseDate(a.createdAt));
     if (counts.has(k)) counts.set(k, (counts.get(k) ?? 0) + 1);
   });
 
@@ -404,14 +404,14 @@ export default function ProgressPage() {
             <CardBody className="pt-0">
               <div className="flex flex-col gap-2">
                 {attempts.slice(0, 10).map((att) => {
-                  const date = parseDate(att.answeredAt);
+                  const date = parseDate(att.createdAt);
                   return (
                     <div
                       key={att.id}
                       className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-slate-50 border border-slate-100"
                     >
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm text-slate-700 truncate">{att.moduleId}</p>
+                        <p className="text-sm text-slate-700 truncate">{att.moduleIds[0] ?? "mixed"}</p>
                         <p className="text-xs text-slate-400 mt-0.5">
                           {date.toLocaleDateString()} at {date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                         </p>
